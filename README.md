@@ -148,6 +148,27 @@ firebase.auth().signOut().then(function() {
 });
 ```
 
+#### 1.2.5) Get Current Signed-In User Details
 
+You can also get the currently signed-in user by using the `currentUser` property. If a user isn't signed in, `currentUser` is null:
+
+```js
+var user = firebase.auth().currentUser;
+
+if (user) {
+  // User is signed in.
+  if (user != null) {
+    name = user.displayName;
+    email = user.email;
+    photoUrl = user.photoURL;
+    emailVerified = user.emailVerified;
+    uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
+                     // this value to authenticate with your backend server, if
+                     // you have one. Use User.getToken() instead.
+  }
+} else {
+  // No user is signed in.
+}
+```
 
 
