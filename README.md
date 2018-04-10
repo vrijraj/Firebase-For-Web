@@ -171,4 +171,103 @@ if (user) {
 }
 ```
 
+#### 1.2.6) Update User Details
+
+You can update a user's basic profile information—the user's display name and profile photo URL—with the `updateProfile` method. For example:
+
+
+
+```js
+var user = firebase.auth().currentUser;
+
+user.updateProfile({
+  displayName: "Updated User's Name",
+  photoURL: "https://example.com/user/profile.jpg"
+}).then(function() {
+  // Update successful.
+  console.log('User Profile Updated Successfully');
+}).catch(function(error) {
+  // An error happened.
+});
+```
+
+
+#### 1.2.7) Set a user's email address
+
+You can set a user's email address with the `updateEmail` method. For example:
+
+```js
+var user = firebase.auth().currentUser;
+
+user.updateEmail("user@example.com").then(function() {
+  // Update successful.
+}).catch(function(error) {
+  // An error happened.
+});
+```
+
+#### 1.2.8) Send a user a verification email
+
+You can send an address verification email to a user with the `sendEmailVerification` method. For example:
+
+```js
+var user = firebase.auth().currentUser;
+
+user.sendEmailVerification().then(function() {
+  // Email sent.
+}).catch(function(error) {
+  // An error happened.
+});
+```
+
+
+#### 1.2.9) Set a user's password
+
+You can set a user's password with the `updatePassword` method. For example:
+
+
+```js
+var user = firebase.auth().currentUser;
+var newPassword = getASecureRandomPassword();
+
+user.updatePassword(newPassword).then(function() {
+  // Update successful.
+}).catch(function(error) {
+  // An error happened.
+});
+```
+
+#### 1.2.10) Send a password reset email
+
+You can send a password reset email to a user with the `sendPasswordResetEmail` method. For example:
+```js
+var auth = firebase.auth();
+var emailAddress = "user@example.com";
+
+auth.sendPasswordResetEmail(emailAddress).then(function() {
+  // Email sent.
+  console.log('Email Sent');
+}).catch(function(error) {
+  // An error happened.
+});
+```
+
+
+#### 1.2.11) Delete User
+
+You can delete a user account with the `delete` method. For example:
+
+```js
+var user = firebase.auth().currentUser;
+
+user.delete().then(function() {
+  // User deleted.
+  console.log('User Deleted');
+}).catch(function(error) {
+  // An error happened.
+});
+```
+You can also delete users from the Authentication section of the [Firebase console](https://console.firebase.google.com/?authuser=0), on the Users page.
+
+
 
