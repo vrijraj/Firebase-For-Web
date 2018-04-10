@@ -76,7 +76,7 @@ Create a form that allows new users to register with your app using their email 
     messagingSenderId: "xxxxxxxxxxxxxxxxxxxxxxx"
   };
   firebase.initializeApp(config);
-  
+  `
   var email="someone@example.com";
   var password="password";
   
@@ -88,7 +88,7 @@ Create a form that allows new users to register with your app using their email 
     console.log(errorCode);
     console.log(errorMessage);
   });
-  
+  `
 </script>
 
 ```
