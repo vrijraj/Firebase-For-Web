@@ -61,7 +61,7 @@
 ## 2) Firebase Authentication  
 ### 1.2) Auth with Email and Password
 #### 1.2.1) Sign Up New User
-
+Create a form that allows new users to register with your app using their email address and a password. When a user completes the form, validate the email address and password provided by the user, then pass them to the createUserWithEmailAndPassword method:
 ```js
 
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
