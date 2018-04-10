@@ -54,9 +54,10 @@ Be sure to paste the configuration code into your web page as described.
 </script>
 
 ```
-
+---
 
 ## 2) Firebase Authentication  
+---
 ### 1.2) Auth with Email and Password
 #### 1.2.1) Sign Up New User
 Create a form that allows new users to register with your app using their email address and a password. When a user completes the form, validate the email address and password provided by the user, then pass them to the `createUserWithEmailAndPassword` method:
@@ -268,6 +269,8 @@ user.delete().then(function() {
 });
 ```
 You can also delete users from the Authentication section of the [Firebase console](https://console.firebase.google.com/?authuser=0), on the Users page.
+
+---
 
 
 ### 1.2) Auth with Using Google Sign-In
