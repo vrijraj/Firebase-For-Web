@@ -63,8 +63,8 @@ Firebase Authentication integrates tightly with other Firebase services, and it 
 
 
 ---
-### 1.2) Auth with Email and Password
-#### 1.2.1) Sign Up New User
+### 2.1) Auth with Email and Password
+#### 2.1.1) Sign Up New User
 Create a form that allows new users to register with your app using their email address and a password. When a user completes the form, validate the email address and password provided by the user, then pass them to the `createUserWithEmailAndPassword` method:
 ```js
 
@@ -88,7 +88,7 @@ Create a form that allows new users to register with your app using their email 
 ```
 
 
-#### 1.2.2) Sign In User
+#### 2.1.2) Sign In User
 Create a form that allows existing users to sign in using their email address and password. When a user completes the form, call the `signInWithEmailAndPassword` method:
 
 
@@ -112,7 +112,7 @@ Create a form that allows existing users to sign in using their email address an
 
 ```
 
-#### 1.2.3) Set an authentication state observer and get user data
+#### 2.1.3) Set an authentication state observer and get user data
 
 For each of your app's pages that need information about the signed-in user, attach an observer to the global authentication object. This observer gets called whenever the user's sign-in state changes.
 
@@ -140,7 +140,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 ```
 
-#### 1.2.4) Sign Out User
+#### 2.1.4) Sign Out User
 
 To sign out a user, call `signOut`:
 
@@ -154,7 +154,7 @@ firebase.auth().signOut().then(function() {
 });
 ```
 
-#### 1.2.5) Get Current Signed-In User Details
+#### 2.1.5) Get Current Signed-In User Details
 
 You can also get the currently signed-in user by using the `currentUser` property. If a user isn't signed in, `currentUser` is null:
 
@@ -177,7 +177,7 @@ if (user) {
 }
 ```
 
-#### 1.2.6) Update User Details
+#### 2.1.6) Update User Details
 
 You can update a user's basic profile information—the user's display name and profile photo URL—with the `updateProfile` method. For example:
 
@@ -198,7 +198,7 @@ user.updateProfile({
 ```
 
 
-#### 1.2.7) Set a user's email address
+#### 2.1.7) Set a user's email address
 
 You can set a user's email address with the `updateEmail` method. For example:
 
@@ -212,7 +212,7 @@ user.updateEmail("user@example.com").then(function() {
 });
 ```
 
-#### 1.2.8) Send a user a verification email
+#### 2.1.8) Send a user a verification email
 
 You can send an address verification email to a user with the `sendEmailVerification` method. For example:
 
@@ -227,7 +227,7 @@ user.sendEmailVerification().then(function() {
 ```
 
 
-#### 1.2.9) Set a user's password
+#### 2.1.9) Set a user's password
 
 You can set a user's password with the `updatePassword` method. For example:
 
@@ -243,7 +243,7 @@ user.updatePassword(newPassword).then(function() {
 });
 ```
 
-#### 1.2.10) Send a password reset email
+#### 2.1.10) Send a password reset email
 
 You can send a password reset email to a user with the `sendPasswordResetEmail` method. For example:
 ```js
@@ -259,7 +259,7 @@ auth.sendPasswordResetEmail(emailAddress).then(function() {
 ```
 
 
-#### 1.2.11) Delete User
+#### 2.1.11) Delete User
 
 You can delete a user account with the `delete` method. For example:
 
@@ -278,7 +278,7 @@ You can also delete users from the Authentication section of the [Firebase conso
 ---
 
 
-### 1.2) Auth with Using Google Sign-In
+### 2.2) Auth with Using Google Sign-In
 
 If you are building a web app, the easiest way to authenticate your users with Firebase using their Google Accounts is to handle the sign-in flow with the Firebase JavaScript SDK. (If you want to authenticate a user in Node.js or other non-browser environment, you must handle the sign-in flow manually.)
 
@@ -334,7 +334,7 @@ To handle the sign-in flow with the Firebase JavaScript SDK, follow these steps:
     });
    ```
    
-   ##### Sign Out User
+   ##### 2.2.2) Sign Out User
    To sign out a user, call `signOut`:
    
    ```js
