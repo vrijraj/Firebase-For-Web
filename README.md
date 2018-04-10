@@ -3,7 +3,7 @@
 ## 1) Firebase Realtime Database 
 ### 1.1) Write Operation
 
-```
+```js
 
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script>
