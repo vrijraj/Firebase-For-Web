@@ -32,7 +32,7 @@
 
 ### 1.2) Read Operation
 
-```
+```js
 
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script>
@@ -62,7 +62,7 @@
 ### 1.2) Auth with Email and Password
 #### 1.2.1) Sign Up New User
 
-```
+```js
 
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script>
