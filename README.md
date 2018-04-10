@@ -76,7 +76,7 @@
     messagingSenderId: "xxxxxxxxxxxxxxxxxxxxxxx"
   };
   firebase.initializeApp(config);
-  
+  **
   var email="someone@example.com";
   var password="password";
   
@@ -88,6 +88,7 @@
     console.log(errorCode);
     console.log(errorMessage);
   });
+  **
 
 
 </script>
