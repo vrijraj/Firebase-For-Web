@@ -270,4 +270,35 @@ user.delete().then(function() {
 You can also delete users from the Authentication section of the [Firebase console](https://console.firebase.google.com/?authuser=0), on the Users page.
 
 
+### 1.2) Auth with Using Google Sign-In
+
+If you are building a web app, the easiest way to authenticate your users with Firebase using their Google Accounts is to handle the sign-in flow with the Firebase JavaScript SDK. (If you want to authenticate a user in Node.js or other non-browser environment, you must handle the sign-in flow manually.)
+
+To handle the sign-in flow with the Firebase JavaScript SDK, follow these steps:
+
+1. Create an instance of the Google provider object:
+```js
+ var provider = new firebase.auth.GoogleAuthProvider();
+```
+2. Authenticate with Firebase using the Google provider object. You can prompt your users to sign in with their Google Accounts either by opening a pop-up window or by redirecting to the sign-in page. The redirect method is preferred on mobile devices.
+   To sign in with a pop-up window, call `signInWithPopup`:
+   
+   ```js
+   firebase.auth().signInWithPopup(provider).then(function(result) {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = result.credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+      // ...
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
+    });
+   ```
 
