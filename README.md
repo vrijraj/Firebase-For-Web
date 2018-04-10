@@ -277,10 +277,11 @@ If you are building a web app, the easiest way to authenticate your users with F
 To handle the sign-in flow with the Firebase JavaScript SDK, follow these steps:
 
 1. Create an instance of the Google provider object:
-```js
+  ```js
  var provider = new firebase.auth.GoogleAuthProvider();
-```
+  ```
 2. Authenticate with Firebase using the Google provider object. You can prompt your users to sign in with their Google Accounts either by opening a pop-up window or by redirecting to the sign-in page. The redirect method is preferred on mobile devices.
+   
    To sign in with a pop-up window, call `signInWithPopup`:
    
    ```js
@@ -299,6 +300,40 @@ To handle the sign-in flow with the Firebase JavaScript SDK, follow these steps:
       // The firebase.auth.AuthCredential type that was used.
       var credential = error.credential;
       // ...
+    });
+   ```
+   
+   To sign in by redirecting to the sign-in page, call `signInWithRedirect`:
+   
+   ```js
+    firebase.auth().getRedirectResult().then(function(result) {
+      if (result.credential) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = result.credential.accessToken;
+        // ...
+      }
+      // The signed-in user info.
+      var user = result.user;
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
+    });
+   ```
+   
+   ##### Sign Out User
+   To sign out a user, call `signOut`:
+   
+   ```js
+    firebase.auth().signOut().then(function() {
+      // Sign-out successful.
+    }).catch(function(error) {
+      // An error happened.
     });
    ```
 
