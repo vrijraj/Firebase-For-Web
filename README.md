@@ -134,5 +134,20 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 ```
 
+#### 1.2.4) Sign Out User
+
+To sign out a user, call `signOut`:
+
+```js
+firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+  console.log('User Logged Out!');
+}).catch(function(error) {
+  // An error happened.
+  console.log(error);
+});
+```
+
+
 
 
