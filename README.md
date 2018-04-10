@@ -1,10 +1,7 @@
 # Firebase-For-Web
 
-## 1) Firebase Realtime Database 
-### 1.1) Write Operation
-
+Be sure to paste the configuration code into your web page as described.
 ```js
-
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -18,6 +15,19 @@
   };
   firebase.initializeApp(config);
   
+  // your code
+  //...
+  
+  </script>
+
+```
+
+## 1) Firebase Realtime Database 
+### 1.1) Write Operation
+
+```js
+
+<script>
   var name="Name";
   
   // Overwite the Data
@@ -34,19 +44,7 @@
 
 ```js
 
-<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "xxxxxxxxxxxxxxxxxxxxxxx",
-    authDomain: "xxxxxxxxxx.firebaseapp.com",
-    databaseURL: "https://xxxxxxxxxxxxxx.firebaseio.com",
-    projectId: "xxxxxxxxxxxxxxxxxxxxxxx",
-    storageBucket: "xxxxxxxxxxxxxxxxxxxxxxx.appspot.com",
-    messagingSenderId: "xxxxxxxxxxxxxxxxxxxxxxx"
-  };
-  firebase.initializeApp(config);
-  
   var name="Name";
 
   firebase.database().ref('data').one('value',(snap)=>{
@@ -64,19 +62,9 @@
 Create a form that allows new users to register with your app using their email address and a password. When a user completes the form, validate the email address and password provided by the user, then pass them to the `createUserWithEmailAndPassword` method:
 ```js
 
-<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
 <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "xxxxxxxxxxxxxxxxxxxxxxx",
-    authDomain: "xxxxxxxxxx.firebaseapp.com",
-    databaseURL: "https://xxxxxxxxxxxxxx.firebaseio.com",
-    projectId: "xxxxxxxxxxxxxxxxxxxxxxx",
-    storageBucket: "xxxxxxxxxxxxxxxxxxxxxxx.appspot.com",
-    messagingSenderId: "xxxxxxxxxxxxxxxxxxxxxxx"
-  };
-  firebase.initializeApp(config);
-  
+ 
   var email="someone@example.com";
   var password="password";
   
@@ -99,19 +87,7 @@ Create a form that allows existing users to sign in using their email address an
 
 
 ```js
-
-<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "xxxxxxxxxxxxxxxxxxxxxxx",
-    authDomain: "xxxxxxxxxx.firebaseapp.com",
-    databaseURL: "https://xxxxxxxxxxxxxx.firebaseio.com",
-    projectId: "xxxxxxxxxxxxxxxxxxxxxxx",
-    storageBucket: "xxxxxxxxxxxxxxxxxxxxxxx.appspot.com",
-    messagingSenderId: "xxxxxxxxxxxxxxxxxxxxxxx"
-  };
-  firebase.initializeApp(config);
   
   var email="someone@example.com";
   var password="password";
