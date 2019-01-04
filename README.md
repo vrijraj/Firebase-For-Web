@@ -27,5 +27,6 @@ Be sure to paste the configuration code into your web page as described.
 
 ```
 ```html
-  <script src="https://pay.google.com/gp/p/js/pay.js" onload="googlePay()"> </script>
+const paymentsClient =
+  new google.payments.api.PaymentsClient({environment: 'TEST'});
 ```
