@@ -27,12 +27,20 @@ Be sure to paste the configuration code into your web page as described.
 
 ```
 ```html
-const tokenizationSpec = {
-  type: 'PAYMENT_GATEWAY',
+const cardPaymentMethod = {
+  type: 'CARD',
+  tokenizationSpecification: tokenizationSpec,
   parameters: {
-    gateway: 'example',
-    gatewayMerchantId: 'gatewayMerchantId'
+    allowedCardNetworks: ['VISA','AMEX'],
+    allowedAuthMethods:     
+      ['PAN_ONLY','CRYPTOGRAM_3DS'],
+    billingAddressRequired: true,
+    billingAddressParameters: {
+      format: 'FULL',
+      phoneNumberRequired: true
+    }
   }
 };
+
 
 ```
