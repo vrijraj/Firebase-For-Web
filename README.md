@@ -26,3 +26,6 @@ Be sure to paste the configuration code into your web page as described.
   </script>
 
 ```
+```html
+  <script src="https://pay.google.com/gp/p/js/pay.js" onload="googlePay()"> </script>
+```
