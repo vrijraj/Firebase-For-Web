@@ -27,15 +27,11 @@ Be sure to paste the configuration code into your web page as described.
 
 ```
 ```js
-const paymentDataRequest = {
-  allowedPaymentMethods: ['CARD', 'TOKENIZED_CARD'],
-  cardRequirements: {
-    allowedCardNetworks: ['AMEX', 'DISCOVER', 'JCB', 'MASTERCARD', 'VISA']
-  },
-  paymentMethodTokenizationParameters: {
-    tokenizationType: 'PAYMENT_GATEWAY',
-    parameters: {'gateway':'example','gatewayMerchantId':'abc123'}
-  }
+paymentDataRequest.transactionInfo = {
+  currencyCode: 'USD',
+  totalPriceStatus: 'FINAL',
+  totalPrice: '12.34'
 };
+
 
 ```
