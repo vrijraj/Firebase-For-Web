@@ -27,11 +27,6 @@ Be sure to paste the configuration code into your web page as described.
 
 ```
 ```js
-paymentDataRequest.transactionInfo = {
-  currencyCode: 'USD',
-  totalPriceStatus: 'FINAL',
-  totalPrice: '12.34'
-};
-
-
+const paymentToken = data.paymentMethodToken;
+askProcessorToCharge(paymentToken, '12.34');
 ```
