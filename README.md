@@ -27,22 +27,13 @@ Be sure to paste the configuration code into your web page as described.
 
 ```
 ```html
-
-const gPayClientConfiguration = {
-  apiVersion: 2,
-  apiVersionMinor: 0,
-  allowedPaymentMethods: [cardPaymentMethod]
-};
-
-gPayClient.isReadyToPay(gPayClientConfiguration)
-  .then(function(response) {
-      if(response.result) {
-        // add a Google Pay button
-      }
-    }).catch(function(err) {
-      // log error in developer console
-    });
-
+gPayClient.createButton({
+  // defaults to black if default or omitted
+  buttonColor: 'default',
+  // defaults to long if omitted
+  buttonType: 'long',
+  onClick: onGooglePaymentsButtonClicked
+});
 
 
 ```
