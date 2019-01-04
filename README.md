@@ -27,6 +27,12 @@ Be sure to paste the configuration code into your web page as described.
 
 ```
 ```html
-const paymentsClient =
-  new google.payments.api.PaymentsClient({environment: 'TEST'});
+const tokenizationSpec = {
+  type: 'PAYMENT_GATEWAY',
+  parameters: {
+    gateway: 'example',
+    gatewayMerchantId: 'gatewayMerchantId'
+  }
+};
+
 ```
