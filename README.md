@@ -26,14 +26,16 @@ Be sure to paste the configuration code into your web page as described.
   </script>
 
 ```
-```html
-gPayClient.createButton({
-  // defaults to black if default or omitted
-  buttonColor: 'default',
-  // defaults to long if omitted
-  buttonType: 'long',
-  onClick: onGooglePaymentsButtonClicked
-});
-
+```js
+const paymentDataRequest = {
+  allowedPaymentMethods: ['CARD', 'TOKENIZED_CARD'],
+  cardRequirements: {
+    allowedCardNetworks: ['AMEX', 'DISCOVER', 'JCB', 'MASTERCARD', 'VISA']
+  },
+  paymentMethodTokenizationParameters: {
+    tokenizationType: 'PAYMENT_GATEWAY',
+    parameters: {'gateway':'example','gatewayMerchantId':'abc123'}
+  }
+};
 
 ```
