@@ -27,20 +27,22 @@ Be sure to paste the configuration code into your web page as described.
 
 ```
 ```html
-const cardPaymentMethod = {
-  type: 'CARD',
-  tokenizationSpecification: tokenizationSpec,
-  parameters: {
-    allowedCardNetworks: ['VISA','AMEX'],
-    allowedAuthMethods:     
-      ['PAN_ONLY','CRYPTOGRAM_3DS'],
-    billingAddressRequired: true,
-    billingAddressParameters: {
-      format: 'FULL',
-      phoneNumberRequired: true
-    }
-  }
+
+const gPayClientConfiguration = {
+  apiVersion: 2,
+  apiVersionMinor: 0,
+  allowedPaymentMethods: [cardPaymentMethod]
 };
+
+gPayClient.isReadyToPay(gPayClientConfiguration)
+  .then(function(response) {
+      if(response.result) {
+        // add a Google Pay button
+      }
+    }).catch(function(err) {
+      // log error in developer console
+    });
+
 
 
 ```
