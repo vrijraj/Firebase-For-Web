@@ -26,7 +26,4 @@ Be sure to paste the configuration code into your web page as described.
   </script>
 
 ```
-```js
-const paymentToken = data.paymentMethodToken;
-askProcessorToCharge(paymentToken, '12.34');
-```
+
