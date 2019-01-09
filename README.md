@@ -27,18 +27,3 @@ Be sure to paste the configuration code into your web page as described.
 
 ```
 
-
-```js
-
-var name1 = $.request.parameters.get('name');
-var conn = $.db.getConnection(); 
-var pstmt = conn.prepareStatement( "INSERT INTO ADMIN.USER_DATA VALUES(?)" );
-pstmt.setString(1,name1);
-pstmt.execute(); 
-conn.commit(); 
-$.response.contentType = 'text/plain';
-$.response.setBody('Data Inserted');
-$.response.status = 200;
-
-```
-
