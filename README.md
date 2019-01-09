@@ -30,11 +30,14 @@ Be sure to paste the configuration code into your web page as described.
 ```js
 let reqHeader = new Headers();
 reqHeader.append('Content-Type', 'text/json');
+
 let initObject = {
     method: 'GET', headers: reqHeader,
 };
 
-fetch('https://api.github.com/users/swapnilbangare', initObject)
+var userRequest = new Request('https://api.github.com/users/swapnilbangare', initObject);
+
+fetch(userRequest)
     .then(function (response) {
         return response.json();
     })
