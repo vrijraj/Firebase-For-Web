@@ -28,13 +28,16 @@ Be sure to paste the configuration code into your web page as described.
 ```
 
 ```js
+var headers = new Headers();
+headers.append('Content-Type', 'text/json');
+headers.append('X-Custom-Header', 'SomeValue');
 
-fetch('https://api.github.com/users/swapnilbangare')
-    .then(function (response) {
-        console.log(response);
-    })
-    .catch(function (err) {
-        console.log("Something went wrong!", err);
-    });
+//We can achieve the same can by passing an object literal to the constructor
+
+var headers = new Headers({
+    'Content-Type': 'text/json',
+    'X-Custom-Header': 'SomeValue'
+});
+
 ```
 
