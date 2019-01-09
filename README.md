@@ -27,3 +27,14 @@ Be sure to paste the configuration code into your web page as described.
 
 ```
 
+```js
+
+fetch('https://api.github.com/users/swapnilbangare')
+    .then(function (response) {
+        console.log(response);
+    })
+    .catch(function (err) {
+        console.log("Something went wrong!", err);
+    });
+```
+
