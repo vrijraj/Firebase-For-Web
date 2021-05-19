@@ -1,1 +1,5 @@
+### Auth with Using GitHub
+In this part, we I'll show you how to authenticate users using the GitHub.
 
+To handle the sign-in flow with the Firebase JavaScript SDK, follow these steps:
+1. [Add Firebase to your JavaScript project](https://console.firebase.google.com).
