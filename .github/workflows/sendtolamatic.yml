@@ -18,6 +18,6 @@ jobs:
         webhook_url: ${{ secrets.WEBHOOK_URL }}
         webhook_key: ${{ secrets.WEBHOOK_KEY }}
         github_ref: ${{ github.ref }}
-        file_type: "mdx"
+        file_type: "md"
         mode: "incremental"  # or "full-refresh"
         verbose: "true"  # or "false"
