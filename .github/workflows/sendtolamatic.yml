@@ -3,7 +3,7 @@ name: Send File Changes
 on:
   push:
     branches:
-      - main  # Adjust to your branch as necessary
+      - web-version-9-(modular)  # Adjust to your branch as necessary
     paths: 
       - '**.mdx'  # Only trigger for changes in .mdx files
 
