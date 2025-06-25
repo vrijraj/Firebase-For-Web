@@ -1,7 +1,7 @@
 # Firebase-For-Web Tutorials
 
 <img src="https://firebase.google.com/images/brand-guidelines/logo-built_white.png" width="200vh">
-Welcome Folks, Here you can find Firebase for Web Tutorial in easy language.
+Welcome Folks, Here you can find Firebase for Web Tutorial in easy languages
 
 Checkout the video tutorial at my [YouTube Channel](https://www.youtube.com/c/TechFerment/)
 
