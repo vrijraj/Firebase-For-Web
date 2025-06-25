@@ -1,0 +1,23 @@
+name: Send File Changes
+
+on:
+  push:
+    branches:
+      - main  # Adjust to your branch as necessary
+    paths: 
+      - '**.mdx'  # Only trigger for changes in .mdx files
+
+jobs:
+  send-changes:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Send File Changes to Webhook
+      uses: Lamatic/Index-to-lamatic@v1.6
+      with:
+        webhook_url: ${{ secrets.WEBHOOK_URL }}
+        webhook_key: ${{ secrets.WEBHOOK_KEY }}
+        github_ref: ${{ github.ref }}
+        file_type: "mdx"
+        mode: "incremental"  # or "full-refresh"
+        verbose: "true"  # or "false"
